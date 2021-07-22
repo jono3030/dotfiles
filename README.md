@@ -1,3 +1,3 @@
 # dotfiles
 
-Linux dotfiles for different purposes
+Collection of useful Linux dotfiles for use on different machines
