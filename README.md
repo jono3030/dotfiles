@@ -1,3 +1,3 @@
-# vimrcs
+# dotfiles
 
-Collection of vimrc's for different purposes
+Linux dotfiles for different purposes
