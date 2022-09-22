@@ -1,8 +1,2 @@
--- Load Packer
- require('packer-plugins')
-
--- Load keybindings
-require('keybindings')
-
--- Load options
-require('opts')
+require "jonas.options"
+require "jonas.keymaps"
