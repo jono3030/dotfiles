@@ -1,7 +1,9 @@
+require("mason").setup()
+require("mason-lspconfig").setup()
+
 local status_ok, _ = pcall(require, "lspconfig")
 if not status_ok then
 	return
 end
 
-require("jonas.lsp.lsp-installer")
 require("jonas.lsp.handlers").setup()
