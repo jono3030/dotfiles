@@ -86,6 +86,9 @@ return packer.startup(function(use)
   -- Rainbow brackets Treesitter extension
   use 'p00f/nvim-ts-rainbow'
 
+  -- Autopairs
+  use "windwp/nvim-autopairs" -- Integrates with both cmp and treesitter
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
