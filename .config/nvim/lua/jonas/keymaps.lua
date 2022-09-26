@@ -31,17 +31,12 @@ keymap("n", "<C-Down>", ":resize -2<CR>", opts)
 keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
--- Navigate buffers
-keymap("n", "<S-l>", ":bnext<CR>", opts)
-keymap("n", "<S-h>", ":bprevious<CR>", opts)
-
 -- Quit insert mode using 'jk' or 'kj'
 keymap('i', 'jk', '<ESC>', opts)
 keymap('i', 'kj', '<ESC>', opts)
 
 -- Open navigation
 -- keymap("n", "<leader>e", ":Lex 30<cr>", opts) -- Obsolete as netrw has been higjacked by nvim-tree
-keymap("n", "<leader>x", ":NvimTreeToggle<cr>", opts)
 
 -- Visual --
 -- Stay in indent mode

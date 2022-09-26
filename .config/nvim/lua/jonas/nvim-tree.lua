@@ -8,6 +8,17 @@ if not config_status_ok then
   return
 end
 
+-- Keymappings
+-- Set default options
+local opts = { noremap = true, silent = true }
+
+-- Shorten function name
+local keymap = vim.api.nvim_set_keymap
+
+-- Open navigation
+-- keymap("n", "<leader>e", ":Lex 30<cr>", opts) -- Obsolete as netrw has been higjacked by nvim-tree
+keymap("n", "<leader>x", ":NvimTreeToggle<cr>", opts)
+
 nvim_tree.setup {
   auto_reload_on_write = true,
   create_in_closed_folder = false,

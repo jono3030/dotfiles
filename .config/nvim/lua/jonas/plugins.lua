@@ -101,11 +101,21 @@ return packer.startup(function(use)
 
   -- File explorer and navigation
   use {
-    'kyazdani42/nvim-tree.lua',
+    'kyazdani42/nvim-tree.lua', -- nvim-tree file explorer
     requires = {
       'kyazdani42/nvim-web-devicons', -- optional, for file icons
     },
   }
+
+  -- Buffers and tabs
+  use {
+    'akinsho/bufferline.nvim', -- Bufferline tabs plugin
+    tag = "v2.*",
+    requires = { 
+      'kyazdani42/nvim-web-devicons'
+    },
+  }
+  use "moll/vim-bbye" -- Allows closing buffers without exiting Neovim
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
