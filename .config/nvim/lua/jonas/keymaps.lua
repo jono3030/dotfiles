@@ -40,7 +40,8 @@ keymap('i', 'jk', '<ESC>', opts)
 keymap('i', 'kj', '<ESC>', opts)
 
 -- Open navigation
-keymap("n", "<leader>e", ":Lex 30<cr>", opts)
+-- keymap("n", "<leader>e", ":Lex 30<cr>", opts) -- Obsolete as netrw has been higjacked by nvim-tree
+keymap("n", "<leader>x", ":NvimTreeToggle<cr>", opts)
 
 -- Visual --
 -- Stay in indent mode
