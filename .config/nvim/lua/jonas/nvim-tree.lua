@@ -18,6 +18,7 @@ local keymap = vim.api.nvim_set_keymap
 -- Open navigation
 -- keymap("n", "<leader>e", ":Lex 30<cr>", opts) -- Obsolete as netrw has been higjacked by nvim-tree
 keymap("n", "<leader>x", ":NvimTreeToggle<cr>", opts)
+keymap("n", "<leader>fx", ":NvimTreeFocus<cr>", opts)
 
 nvim_tree.setup {
   auto_reload_on_write = true,
@@ -143,7 +144,7 @@ nvim_tree.setup {
     args = {},
   },
   diagnostics = {
-    enable = false,
+    enable = true,
     show_on_dirs = false,
     debounce_delay = 50,
     icons = {

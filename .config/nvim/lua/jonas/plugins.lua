@@ -115,7 +115,13 @@ return packer.startup(function(use)
       'kyazdani42/nvim-web-devicons'
     },
   }
-  use "moll/vim-bbye" -- Allows closing buffers without exiting Neovim
+  use "moll/vim-bbye" -- Allows closing buffers without exiting Neovim using 'Bdelete'
+
+  -- Statusbar
+  use {
+  'nvim-lualine/lualine.nvim', -- Lualine
+  requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+}
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
