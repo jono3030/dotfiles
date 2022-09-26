@@ -92,6 +92,10 @@ return packer.startup(function(use)
   -- indent-blankline
   use "lukas-reineke/indent-blankline.nvim"
 
+  -- Commenting
+  use "numToStr/Comment.nvim" -- Commenting plugin
+  -- use "JoosepAlviste/nvim-ts-context-commentstring" -- Sets commentstring option i.e. takes care of context aware commenting
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
