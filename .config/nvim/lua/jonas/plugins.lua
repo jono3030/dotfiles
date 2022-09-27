@@ -111,7 +111,7 @@ return packer.startup(function(use)
   use {
     'akinsho/bufferline.nvim', -- Bufferline tabs plugin
     tag = "v2.*",
-    requires = { 
+    requires = {
       'kyazdani42/nvim-web-devicons'
     },
   }
@@ -122,6 +122,9 @@ return packer.startup(function(use)
   'nvim-lualine/lualine.nvim', -- Lualine
   requires = { 'kyazdani42/nvim-web-devicons', opt = true }
 }
+
+  -- Performance
+  use 'lewis6991/impatient.nvim' -- impatient.nvim speeds up loading Lua modules into Nvim
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
