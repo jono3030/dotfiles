@@ -72,7 +72,8 @@ return packer.startup(function(use)
   -- LSP
   use "neovim/nvim-lspconfig" -- Enable LSP. Supported by Nvim core maintainers.
   use "williamboman/mason.nvim" -- Language server installer. Replaces nvim-lsp-installer.
-  use "williamboman/mason-lspconfig.nvim" -- Used to close some gaps between mason.nvim and lspconfig
+  use "williamboman/mason-lspconfig.nvim" -- Used to close some gaps between mason.nvim and lspconfig e.g. server and package names translation. 
+  use "WhoIsSethDaniel/mason-tool-installer.nvim" -- Helps with installing and upgrading servers e.g. automatic installation at startup
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"

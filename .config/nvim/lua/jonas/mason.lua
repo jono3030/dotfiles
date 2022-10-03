@@ -3,7 +3,7 @@ if not status_ok then
 	return
 end
 
-require("mason").setup({
+mason.setup({
   ui = {
     -- Whether to automatically check for new versions when opening the :Mason window.
     check_outdated_packages_on_open = true,
