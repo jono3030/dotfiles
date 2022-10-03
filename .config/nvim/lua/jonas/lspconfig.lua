@@ -1,48 +1,48 @@
 local status_ok, lspconfig = pcall(require, "lspconfig")
 if not status_ok then
-	return
+  return
 end
 
 -- Define cool symbols to use instead of letters
 local signs = {
-   { name = "DiagnosticSignError", text = "" },
-   { name = "DiagnosticSignWarn", text = "" },
-   { name = "DiagnosticSignHint", text = "" },
-   { name = "DiagnosticSignInfo", text = "" },
- }
+  { name = "DiagnosticSignError", text = "" },
+  { name = "DiagnosticSignWarn", text = "" },
+  { name = "DiagnosticSignHint", text = "" },
+  { name = "DiagnosticSignInfo", text = "" },
+}
 
- -- Implement cool symbols
- for _, sign in ipairs(signs) do
-    vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = "" })
-  end
+-- Implement cool symbols
+for _, sign in ipairs(signs) do
+  vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = "" })
+end
 
 -- Define lsp config options
 local config = {
-    -- disable virtual text
-    virtual_text = false,
-    -- show signs
-    signs = {
-      active = signs,
-    },
-    update_in_insert = true,
-    underline = false,
-    severity_sort = true,
-    float = {
-      focusable = false,
-      style = "minimal",
-      border = "rounded",
-      source = "always",
-      header = "",
-      prefix = "",
-    },
-  }
+  -- disable virtual text
+  virtual_text = false,
+  -- show signs
+  signs = {
+    active = signs,
+  },
+  update_in_insert = true,
+  underline = false,
+  severity_sort = true,
+  float = {
+    focusable = false,
+    style = "minimal",
+    border = "rounded",
+    source = "always",
+    header = "",
+    prefix = "",
+  },
+}
 
 -- Set lsp config options
 vim.diagnostic.config(config)
 
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
-local opts = { noremap=true, silent=true }
+local opts = { noremap = true, silent = true }
 vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, opts)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
@@ -56,7 +56,7 @@ local on_attach = function(client, bufnr)
 
   -- Mappings.
   -- See `:help vim.lsp.*` for documentation on any of the below functions
-  local bufopts = { noremap=true, silent=true, buffer=bufnr }
+  local bufopts = { noremap = true, silent = true, buffer = bufnr }
   vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
   vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
   vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
@@ -71,7 +71,7 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, bufopts)
   vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
   vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
-  vim.keymap.set('n', '<space>f', vim.lsp.buf.formatting, bufopts)
+  vim.keymap.set('n', '<space>f', vim.lsp.buf.format, bufopts)
 
   -- Highlight related keywords
   if client.supports_method('textDocument/documentHighlight') then
@@ -82,20 +82,20 @@ local on_attach = function(client, bufnr)
         autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
         autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
       augroup END
-    ]],
+    ]] ,
       false
     )
-    end
+  end
 
   if client.supports_method('textDocument/hover') then
     vim.lsp.with(vim.lsp.handlers.hover, {
       border = "rounded"
-      })
+    })
   end
 
   if client.supports_method('textDocument/signatureHelp') then
     vim.lsp.with(vim.lsp.handlers.signature_help, {
-    border = "rounded"
+      border = "rounded"
     })
   end
 
@@ -115,20 +115,20 @@ end
 
 capabilities = cmp_nvim_lsp.update_capabilities(capabilities)
 
-require('lspconfig')['pyright'].setup{
-    on_attach = on_attach,
-    flags = lsp_flags,
-    capabilities = capabilities,
+require('lspconfig')['pyright'].setup {
+  on_attach = on_attach,
+  flags = lsp_flags,
+  capabilities = capabilities,
 }
-require('lspconfig')['sumneko_lua'].setup{
-    on_attach = on_attach,
-    flags = lsp_flags,
-    capabilities = capabilities,
-    settings = {
-      Lua = {
-        diagnostics = {
-          -- Get the language server to recognize the 'vim' global
-          globals = {'vim'}
+require('lspconfig')['sumneko_lua'].setup {
+  on_attach = on_attach,
+  flags = lsp_flags,
+  capabilities = capabilities,
+  settings = {
+    Lua = {
+      diagnostics = {
+        -- Get the language server to recognize the 'vim' global
+        globals = { 'vim' }
       }
     }
   }

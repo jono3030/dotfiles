@@ -2,6 +2,7 @@
 -- Setting options with for loop
 local options = {
   -- [[ Context ]]
+  backupdir = '/home/jonas/.local/state/nvim/backup', -- Set backup location for files being edited
   colorcolumn = '80',           -- str:  Show col for max line length
   number = true,                -- bool: Show line numbers
   relativenumber = true,        -- bool: Show relative line numbers

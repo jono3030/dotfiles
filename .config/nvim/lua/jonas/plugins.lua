@@ -126,6 +126,9 @@ return packer.startup(function(use)
   -- Performance
   use 'lewis6991/impatient.nvim' -- impatient.nvim speeds up loading Lua modules into Nvim
 
+  -- LSP diagnostics, formatting and code actions
+  use 'jose-elias-alvarez/null-ls.nvim' -- null-ls.nvim diagnostics via Lua
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
