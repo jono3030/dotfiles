@@ -1,3 +1,3 @@
 # dotfiles
 
-Tmux, bash and lua dotfiles for Neovim IDE
+Dotfiles for taskwarrior, timewarrior and vimwiki
