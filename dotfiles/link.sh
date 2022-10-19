@@ -12,5 +12,5 @@ ln -s /home/jonas/dotfiles/dotfiles/.vim /home/jonas/.vim
 ln -s /home/jonas/dotfiles/dotfiles/.viminfo /home/jonas/.viminfo
 ln -s /home/jonas/dotfiles/dotfiles/.vimrc /home/jonas/.vimrc
 ln -s /home/jonas/dotfiles/dotfiles/.vimwiki /home/jonas/.vimwiki
-sed "s/\(data.location=\/\).*\(\/.task\)/\1\home\/jonas\2/g" /home/jonas/.taskrc
+sed -i "s/\(data.location=\/\).*\(\/.task\)/\1\home\/jonas\2/g" /home/jonas/.taskrc
 #sed "s/\(data.location=\/\).*\(\/.task\)/\1\home\/$(whoami)\2/g" /home/jonas/.taskrc
