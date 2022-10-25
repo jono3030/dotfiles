@@ -113,7 +113,7 @@ if not cnl_status_ok then
   return
 end
 
-capabilities = cmp_nvim_lsp.update_capabilities(capabilities)
+capabilities = cmp_nvim_lsp.default_capabilities(capabilities)
 
 require('lspconfig')['pyright'].setup {
   on_attach = on_attach,
