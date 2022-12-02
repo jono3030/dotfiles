@@ -14,6 +14,8 @@ ln -s /home/$SCR_USER/dotfiles_sync/.vim /home/$SCR_USER/.vim
 ln -s /home/$SCR_USER/dotfiles_sync/.viminfo /home/$SCR_USER/.viminfo
 ln -s /home/$SCR_USER/dotfiles_sync/.vimrc /home/$SCR_USER/.vimrc
 ln -s /home/$SCR_USER/dotfiles_sync/vimwiki /home/$SCR_USER/vimwiki
+mkdir -p /home/$SCR_USER/.config
+mkdir -p /home/$SCR_USER/.local/share
 ln -s /home/$SCR_USER/dotfiles_sync/.config/calcurse /home/$SCR_USER/.config/calcurse
 ln -s /home/$SCR_USER/dotfiles_sync/.local/share/calcurse /home/$SCR_USER/.local/share/calcurse
 #sed -i "s/\(data.location=\/\).*\(\/.task\)/\1\home\/$SCR_USER\2/g" /home/$SCR_USER/.taskrc
