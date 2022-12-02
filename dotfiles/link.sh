@@ -4,7 +4,6 @@ SCR_USER=$(whoami)
 
 #mv /home/$SCR_USER/dotfiles/dotfiles/* /home/$SCR_USER/dotfiles/.
 #rm -r /home/$SCR_USER/dotfiles/dotfiles
-rm /home/$SCR_USER/.taskrc
 ln -s /home/$SCR_USER/dotfiles_sync/.task /home/$SCR_USER/.task
 ln -s /home/$SCR_USER/dotfiles_sync/.taskrc /home/$SCR_USER/.taskrc
 ln -s /home/$SCR_USER/dotfiles_sync/.timewarrior /home/$SCR_USER/.timewarrior
