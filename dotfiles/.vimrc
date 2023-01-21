@@ -11,6 +11,8 @@ Plug 'tools-life/taskwiki'
 
 call plug#end()
 
+
+set noswapfile # Disable swap files to prevent errors with Syncthing
 set nocompatible
 filetype plugin on
 syntax on
@@ -23,3 +25,4 @@ let mapleader = " "
 let g:vimwiki_list = [{'path': '~/vimwiki/AICONS/', 'syntax': 'markdown', 'ext': '.md'}]
 let g:vimwiki_markdown_link_ext = 1
 let g:taskwiki_markup_syntax = 'markdown'
+
