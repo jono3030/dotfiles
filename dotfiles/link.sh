@@ -21,5 +21,6 @@ ln -s /home/$SCR_USER/dotfiles_sync/vimwiki /home/$SCR_USER/vimwiki
 ln -s /home/$SCR_USER/dotfiles_sync/.config/calcurse /home/$SCR_USER/.config/calcurse
 ln -s /home/$SCR_USER/dotfiles_sync/.local/share/calcurse /home/$SCR_USER/.local/share/calcurse
 ln -s /home/$SCR_USER/dotfiles_sync/.local/share/taskwarrior-tui /home/$SCR_USER/.local/share/taskwarrior-tui
+ln -s /home/$SCR_USER/dotfiles_sync/.when /home/$SCR_USER/.when
 #sed -i "s/\(data.location=\/\).*\(\/.task\)/\1\home\/$SCR_USER\2/g" /home/$SCR_USER/.taskrc
 #sed "s/\(data.location=\/\).*\(\/.task\)/\1\home\/$(whoami)\2/g" /home/$SCR_USER/.taskrc
