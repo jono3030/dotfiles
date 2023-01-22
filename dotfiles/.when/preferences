@@ -1,2 +1,2 @@
-calendar = /root/.when/calendar
+calendar = ~/.when/calendar
 editor = vim
