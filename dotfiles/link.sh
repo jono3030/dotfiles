@@ -6,7 +6,6 @@ SCR_USER=$(whoami)
 # Create directories required for symlinks
 mkdir -p /home/$SCR_USER/.config
 mkdir -p /home/$SCR_USER/.local/share
-mkdir -p /home/$SCR_USER/.when
 
 # Make symlinks from sync folder to container
 #mv /home/$SCR_USER/dotfiles/dotfiles/* /home/$SCR_USER/dotfiles/.
