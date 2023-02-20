@@ -136,6 +136,11 @@ return packer.startup(function(use)
     tag = "*"
   }
 
+  -- Symbols bar
+  use {
+    'simrat39/symbols-outline.nvim'
+  }
+
   -- Performance
   use 'lewis6991/impatient.nvim' -- impatient.nvim speeds up loading Lua modules into Nvim
 
