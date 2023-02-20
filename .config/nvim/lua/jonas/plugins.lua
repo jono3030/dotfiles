@@ -120,9 +120,15 @@ return packer.startup(function(use)
 
   -- Statusbar
   use {
-  'nvim-lualine/lualine.nvim', -- Lualine
-  requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-}
+    'nvim-lualine/lualine.nvim', -- Lualine
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
+
+  -- Todo comments
+  use {
+    "folke/todo-comments.nvim",
+    requires = "nvim-lua/plenary.nvim"
+  }
 
   -- Performance
   use 'lewis6991/impatient.nvim' -- impatient.nvim speeds up loading Lua modules into Nvim
