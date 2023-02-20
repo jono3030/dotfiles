@@ -130,6 +130,12 @@ return packer.startup(function(use)
     requires = "nvim-lua/plenary.nvim"
   }
 
+  -- Nvim surround
+  use {
+    "kylechui/nvim-surround",
+    tag = "*"
+  }
+
   -- Performance
   use 'lewis6991/impatient.nvim' -- impatient.nvim speeds up loading Lua modules into Nvim
 
