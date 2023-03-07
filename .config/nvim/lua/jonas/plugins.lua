@@ -141,6 +141,12 @@ return packer.startup(function(use)
     'simrat39/symbols-outline.nvim'
   }
 
+  -- Trouble
+  use {
+    "folke/trouble.nvim",
+    requires = "nvim-tree/nvim-web-devicons"
+  }
+
   -- Performance
   use 'lewis6991/impatient.nvim' -- impatient.nvim speeds up loading Lua modules into Nvim
 
