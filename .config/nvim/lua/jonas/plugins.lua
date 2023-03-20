@@ -141,10 +141,10 @@ return packer.startup(function(use)
     'simrat39/symbols-outline.nvim'
   }
 
-  -- Trouble
+  -- Hop version 2
   use {
-    "folke/trouble.nvim",
-    requires = "nvim-tree/nvim-web-devicons"
+    'phaazon/hop.nvim',
+    branch = 'v2'
   }
 
   -- Performance
