@@ -136,6 +136,12 @@ return packer.startup(function(use)
     tag = "*"
   }
 
+  -- Undotree
+  use {
+    "jiaoshijie/undotree",
+    requires = "nvim-lua/plenary.nvim"
+  }
+
   -- Symbols bar
   use {
     'simrat39/symbols-outline.nvim'
