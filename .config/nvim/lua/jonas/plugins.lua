@@ -130,6 +130,14 @@ return packer.startup(function(use)
     requires = "nvim-lua/plenary.nvim"
   }
 
+  -- Colorful window separation like Tmux
+  use {
+    "nvim-zh/colorful-winsep.nvim",
+    config = function ()
+        require('colorful-winsep').setup()
+    end
+  }
+
   -- Nvim surround
   use {
     "kylechui/nvim-surround",
