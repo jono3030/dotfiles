@@ -155,6 +155,11 @@ return packer.startup(function(use)
     'simrat39/symbols-outline.nvim'
   }
 
+  -- Improved signature help
+  use {
+    "ray-x/lsp_signature.nvim",
+  }
+
   -- Hop version 2
   use {
     'phaazon/hop.nvim',
