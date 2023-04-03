@@ -7,7 +7,8 @@ colorful_winsep.setup({
   -- highlight for Window separator
   highlight = {
     bg = "#16161E",
-    fg = "#1F3442",
+    -- fg = "#1F3442",
+    fg = "#2bff00",
   },
   -- timer refresh rate
   interval = 30,
