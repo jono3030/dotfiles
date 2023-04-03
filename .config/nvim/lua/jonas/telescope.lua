@@ -18,11 +18,11 @@ telescope.setup {
 
     mappings = {
 
-    vim.keymap.set('n', '<leader>ff', ':Telescope find_files<CR>', opts),
-    vim.keymap.set('n', '<leader>fg', ':Telescope live_grep<CR>', opts),
-    vim.keymap.set('n', '<leader>fb', ':Telescope buffers<CR>', opts),
-    vim.keymap.set('n', '<leader>fa', ':Telescope find_files hidden=true<CR>', opts),
-    vim.keymap.set('n', '<leader>fh', ':Telescope help_tags<CR>', opts),
+    vim.keymap.set('n', '<leader>sf', ':Telescope find_files<CR>', opts),
+    vim.keymap.set('n', '<leader>sg', ':Telescope live_grep<CR>', opts),
+    vim.keymap.set('n', '<leader>sb', ':Telescope buffers<CR>', opts),
+    vim.keymap.set('n', '<leader>sa', ':Telescope find_files hidden=true<CR>', opts),
+    vim.keymap.set('n', '<leader>sh', ':Telescope help_tags<CR>', opts),
 
       i = {
         -- Cycle through search history
