@@ -1,3 +1,3 @@
-# dotfiles
+# NvChad
 
-Tmux, bash and lua dotfiles for Neovim IDE
+Custom lua files for NvChad
