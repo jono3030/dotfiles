@@ -1,8 +1,13 @@
 ---@type ChadrcConfig 
- local M = {}
- M.ui = {theme = 'gruvbox'}
+local M = {}
+
+-- Colotheme
+M.ui = {theme = 'decay'}
 
 -- Reference to custom key mappings
- M.mappings = require "custom.mappings"
+M.mappings = require "custom.mappings"
 
- return M
+-- Custom plugins
+M.plugins = 'custom.plugins'
+
+return M
