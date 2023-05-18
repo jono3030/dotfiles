@@ -2,7 +2,7 @@
 local M = {}
 
 -- Colotheme
-M.ui = {theme = 'decay'}
+M.ui = {theme = 'nightfox'}
 
 -- Reference to custom key mappings
 M.mappings = require "custom.mappings"
