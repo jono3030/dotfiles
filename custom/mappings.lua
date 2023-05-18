@@ -25,5 +25,20 @@ M.general = {
 
 }
 
+M.dap = {
+  n = {
+    ["<leader>db"] = { "<cmd> DapToggleBreakpoint <CR>", "Toggle breakpoint", opts = { nowait = true }},
+    ["<leader>dr"] = { "<cmd> RustDebuggables <CR>", "Run debugging", opts = { nowait = true }},
+    ["<leader>dus"] = {
+      function ()
+        local widgets = require('dap.ui.widgets');
+        local sidebar = widgets.sidebar(widgets.scopes);
+        sidebar.open()
+      end,
+      "Open debugging sidebar",
+      opts = { nowait = true }},
+  },
+}
+
 return M
 
