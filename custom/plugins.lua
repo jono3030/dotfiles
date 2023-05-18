@@ -3,6 +3,7 @@ local plugins = {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
+	"lua-language-server",
         "pyright",
         "flake8",
         "black",
