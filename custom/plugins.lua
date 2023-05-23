@@ -46,6 +46,22 @@ local plugins = {
   },
   {
     "mfussenegger/nvim-dap",
+  },
+  {
+    "simrat39/symbols-outline.nvim",
+    lazy = false,
+    config = function ()
+      require("custom.configs.symbols-outline")
+    end,
+  },
+  {
+    "folke/todo-comments.nvim",
+    dependencies = 'nvim-lua/plenary.nvim',
+    lazy = false,
+    config = function ()
+      require("custom.configs.todo-comments")
+    end
   }
 }
+
 return plugins
