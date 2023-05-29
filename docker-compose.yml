@@ -1,0 +1,25 @@
+version: '3'
+services:
+  nvchad_dev:
+    build:
+      context: .
+      dockerfile: arch.Dockerfile
+      args:
+        USER_ID: ${USER_ID}
+        GROUP_ID: ${GROUP_ID}
+        USER: ${USER}
+    env_file:
+      - .env
+    image: josmann/nvchad_dev_img:latest
+    container_name: nvchad_dev
+    tty: true
+    security_opt:
+      - seccomp:unconfined # For lldb debugging
+    cap_add:
+      - SYS_PTRACE # For lldb debugging
+    volumes:
+      - './dotfiles/custom:/home/josmann/.config/nvim/lua/custom'
+      - '/home/josmann/docker/containers:/home/josmann/containers'
+      - '/data:/data'
+      - '/data2:/data2'
+      - '/home/josmann/git:/home/josmann/git'
