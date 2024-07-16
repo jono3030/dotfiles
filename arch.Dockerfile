@@ -23,7 +23,13 @@ RUN pacman -S --noconfirm \
     fd \
     rsync \
     npm \
+    unzip \
     gcc
+
+# Python specific installation
+RUN pacman -S --noconfirm \
+    python \
+    python-pip
 
 # Install and configure Git and Lazygit
 RUN pacman -S --noconfirm \
@@ -32,19 +38,6 @@ RUN pacman -S --noconfirm \
     && git config --global user.name "${FULL_NAME}" \
     && git config --global user.email "${E_MAIL}" \
     && git config --global alias.l1 "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-
-# Python specific installation
-RUN pacman -S --noconfirm \
-    python-pip
-# To prevent executable not found error
-RUN pip install pynvim
-
-# Rust specific installation
-RUN pacman -S --noconfirm \
-    rustup \
-    lldb
-# Update rustup and set stable as env
-RUN rustup default stable
 
 # Install zsh
 RUN pacman -S --noconfirm \
@@ -61,7 +54,7 @@ USER $USER
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Pull NvChad configs
-RUN git clone https://github.com/NvChad/NvChad /home/$USER/.config/nvim --depth 1
+RUN git clone https://github.com/NvChad/starter ~/.config/nvim
 
 # Pull custom configs for NvChad from own repo
 ### RUN git clone -b nvchad_base --single-branch https://github.com/jono3030/dotfiles.git /home/$USER/dotfiles

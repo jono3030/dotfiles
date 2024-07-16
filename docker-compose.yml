@@ -1,6 +1,6 @@
 version: '3'
 services:
-  nvchad_dev:
+  nvchad_cpp:
     build:
       context: .
       dockerfile: arch.Dockerfile
@@ -10,16 +10,15 @@ services:
         USER: ${USER}
     env_file:
       - .env
-    image: josmann/nvchad_dev_img:latest
-    container_name: nvchad_dev
+    image: josmann/nvchad_cpp_img:latest
+    container_name: nvchad_cpp
     tty: true
     security_opt:
       - seccomp:unconfined # For lldb debugging
     cap_add:
       - SYS_PTRACE # For lldb debugging
     volumes:
-      - './dotfiles/custom:/home/josmann/.config/nvim/lua/custom'
-      - '/home/josmann/docker/containers:/home/josmann/containers'
-      - '/data:/data'
-      - '/data2:/data2'
-      - '/home/josmann/git:/home/josmann/git'
+      - './dotfiles/custom:/home/jonas/.config/nvim/lua/custom'
+      - '/home/jonas/git:/home/jonas/git'
+      - '/home/jonas/aicons:/home/jonas/aicons'
+      - '/home/jonas/Docker/compose_files:/home/jonas/Docker'
