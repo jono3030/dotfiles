@@ -22,7 +22,6 @@ RUN pacman -S --noconfirm \
     xclip \
     fd \
     rsync \
-    npm \
     unzip \
     gcc
 
@@ -54,14 +53,14 @@ USER $USER
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Pull NvChad configs
-RUN git clone https://github.com/NvChad/starter ~/.config/nvim
+# RUN git clone https://github.com/NvChad/starter ~/.config/nvim
 
 # Pull custom configs for NvChad from own repo
 ### RUN git clone -b nvchad_base --single-branch https://github.com/jono3030/dotfiles.git /home/$USER/dotfiles
 ### RUN rsync -a /home/$USER/dotfiles/custom /home/$USER/.config/nvim/lua/
 ### RUN rm -r /home/$USER/dotfiles
 
-### COPY ./dotfiles/custom /home/$USER/.config/nvim/lua/
+# COPY ./.config /home/$USER/.config
 
 # Fix Neovim colorscheme not working in Tmux
 # .zshrc

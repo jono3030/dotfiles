@@ -18,7 +18,8 @@ services:
     cap_add:
       - SYS_PTRACE # For lldb debugging
     volumes:
-      - './dotfiles/custom:/home/jonas/.config/nvim/lua/custom'
+      #- './dotfiles/custom:/home/jonas/.config/nvim/lua/custom'
+      - './.config:/home/jonas/.config'
       - '/home/jonas/git:/home/jonas/git'
       - '/home/jonas/aicons:/home/jonas/aicons'
       - '/home/jonas/Docker/compose_files:/home/jonas/Docker'
