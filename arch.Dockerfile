@@ -12,8 +12,13 @@ ARG E_MAIL
 LABEL maintainer="${FULL_NAME} <${E_MAIL}>"
 
 # Install general nvim packages
-RUN pacman -Sy
-RUN pacman -S --noconfirm \
+RUN pacman -Scc --noconfirm
+RUN pacman -Sy --noconfirm archlinux-keyring
+RUN rm -rf /etc/pacman.d/gnupg
+RUN pacman-key --init
+RUN pacman-key --populate archlinux
+RUN pacman -Syyu --noconfirm
+RUN pacman -S --needed --noconfirm \
     neovim \
     ripgrep \
     wget \
