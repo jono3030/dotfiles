@@ -18,3 +18,7 @@ GROUP_ID=
 3. Add the volumes you want to mount to `docker-compose.yml`
 4. Run `docker compose up -d`
 5. Run `docker exec -it nvchad_dev zsh` to attach to the container
+
+# To-do
+
+- [ ] Write better docs
