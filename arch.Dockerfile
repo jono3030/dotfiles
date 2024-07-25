@@ -18,7 +18,8 @@ RUN rm -rf /etc/pacman.d/gnupg
 RUN pacman-key --init
 RUN pacman-key --populate archlinux
 RUN pacman -Syyu --noconfirm
-RUN pacman -S --needed --noconfirm \
+RUN pacman -Sy
+RUN pacman -S --needed --noconfirm --disable-download-timeout \
     neovim \
     ripgrep \
     wget \
@@ -27,6 +28,7 @@ RUN pacman -S --needed --noconfirm \
     xclip \
     fd \
     rsync \
+    npm \
     unzip \
     gcc
 
@@ -34,6 +36,10 @@ RUN pacman -S --needed --noconfirm \
 RUN pacman -S --noconfirm \
     python \
     python-pip
+
+# To prevent executable not found error
+RUN pip install --break-system-packages pynvim 
+RUN pip install --break-system-packages pyright
 
 # Install and configure Git and Lazygit
 RUN pacman -S --noconfirm \
