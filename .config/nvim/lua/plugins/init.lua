@@ -22,9 +22,9 @@ return {
       ensure_installed = {
         "lua-language-server",
         "stylua",
-	"pyright",
-	"flake8",
-	"black"
+        "pyright",
+        "flake8",
+        "black",
       },
     },
   },
@@ -78,9 +78,20 @@ return {
         "vim",
         "lua",
         "vimdoc",
-	"python"
+        "python",
       },
     },
+  },
+  --
+  {
+    "kylechui/nvim-surround",
+    version = "*", -- Use for stability; omit to use `main` branch for the latest features
+    event = "VeryLazy",
+    config = function()
+      require("nvim-surround").setup {
+        -- Configuration here, or leave empty to use defaults
+      }
+    end,
   },
   --
   {
