@@ -93,6 +93,18 @@ return {
   },
   --
   {
+    "m4xshen/hardtime.nvim",
+    event = "VeryLazy",
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+      "nvim-lua/plenary.nvim" 
+    },
+    config = function()
+      require "configs.hardtime"
+    end,
+  },
+  --
+  {
     "jose-elias-alvarez/null-ls.nvim",
     event = "VeryLazy",
     config = function()
