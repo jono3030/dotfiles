@@ -30,6 +30,7 @@ RUN pacman -S --needed --noconfirm --disable-download-timeout \
     rsync \
     npm \
     unzip \
+    flake8 \
     gcc
 
 # Python specific installation
