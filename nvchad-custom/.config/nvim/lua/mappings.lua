@@ -14,6 +14,24 @@ map("i", "jk", "<Esc>", opts)
 -- Reload config
 -- map("n", "<leader>r", ":source $MYVIMRC<CR>", opts)
 
--- Telescope shortcuts
+-- Telescope
 -- map("n", "<leader>ff", "<cmd>Telescope find_files<CR>", opts)
 -- map("n", "<leader>fg", "<cmd>Telescope live_grep<CR>", opts)
+
+local telescope_builtin = require("telescope.builtin")
+
+vim.keymap.set("n", "<leader>fr", "<cmd>Telescope resume<CR>", vim.tbl_extend("force", opts, { desc = "Resume last Telescope picker" }))
+
+vim.keymap.set("n", "<leader>fs", function()
+  telescope_builtin.lsp_document_symbols()
+end, vim.tbl_extend("force", opts, { desc = "Find LSP document symbols in current buffer" }))
+
+vim.keymap.set("n", "<leader>fS", function()
+  telescope_builtin.lsp_workspace_symbols()
+end, vim.tbl_extend("force", opts, { desc = "Find LSP workspace symbols in project" }))
+
+vim.keymap.set("n", "<leader>fc", function()
+  telescope_builtin.registers({
+    prompt_title = "Registers",
+  })
+end, vim.tbl_extend("force", opts, { desc = "Show registers and paste on <CR>" }))
