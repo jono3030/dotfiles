@@ -27,7 +27,7 @@ vim.keymap.set("n", "<leader>fc", function()
   telescope_builtin.registers({
     prompt_title = "Registers",
   })
-end, vim.tbl_extend("force", opts, { desc = "Show registers and paste on <CR>" }))
+end, vim.tbl_extend("force", opts, { desc = "Show and paste registers" }))
 
 -- Gitsigns
 map("n", "<leader>gb", function()
