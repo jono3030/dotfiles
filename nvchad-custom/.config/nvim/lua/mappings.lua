@@ -7,13 +7,6 @@ local opts = { noremap = true, silent = true }
 -- Fast escape from insert mode
 map("i", "jk", "<Esc>", opts)
 
--- More key mappings here
--- Save file with Ctrl-s
--- map("n", "<C-s>", ":w<CR>", opts)
-
--- Reload config
--- map("n", "<leader>r", ":source $MYVIMRC<CR>", opts)
-
 -- Telescope
 -- map("n", "<leader>ff", "<cmd>Telescope find_files<CR>", opts)
 -- map("n", "<leader>fg", "<cmd>Telescope live_grep<CR>", opts)
@@ -35,3 +28,19 @@ vim.keymap.set("n", "<leader>fc", function()
     prompt_title = "Registers",
   })
 end, vim.tbl_extend("force", opts, { desc = "Show registers and paste on <CR>" }))
+
+-- Gitsigns
+map("n", "<leader>gb", function()
+  require("gitsigns").blame_line()
+end, vim.tbl_extend("force", opts, { desc = "Toggle Git blame overlay for current line" }))
+
+map("n", "<leader>gi", function()
+  require("gitsigns").toggle_current_line_blame()
+end, vim.tbl_extend("force", opts, { desc = "Toggle inline Git blame" }))
+
+-- More key mappings here
+-- Save file with Ctrl-s
+-- map("n", "<C-s>", ":w<CR>", opts)
+
+-- Reload config
+-- map("n", "<leader>r", ":source $MYVIMRC<CR>", opts)
