@@ -1,3 +1,3 @@
-# dotfiles
+# Stow-structured dotfiles
 
-Tmux, bash and lua dotfiles for Neovim IDE
+Repo for dotfiles managed with Stow.
