@@ -1,3 +1,3 @@
-# Stow-structured dotfiles
+# dotfiles
 
-Repo for dotfiles managed with Stow.
+Manage with Stow.
