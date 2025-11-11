@@ -28,4 +28,4 @@ undotree.setup({
 -- Keymaps
 -- vim.keymap.set('n', '<leader>uo', undotree.open, { noremap = true, silent = true })
 -- vim.keymap.set('n', '<leader>uo', undotree.open, { noremap = true, silent = true })
-vim.keymap.set('n', '<leader>u', undotree.toggle, { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>u', undotree.toggle, { desc = "toggle Undotree", noremap = true, silent = true })
