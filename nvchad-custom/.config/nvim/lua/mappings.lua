@@ -38,9 +38,30 @@ map("n", "<leader>gi", function()
   require("gitsigns").toggle_current_line_blame()
 end, vim.tbl_extend("force", opts, { desc = "Toggle inline Git blame" }))
 
+map("n", "]h", function()
+  require("gitsigns").next_hunk()
+end, vim.tbl_extend("force", opts, { desc = "Next git hunk" }))
+
+map("n", "[h", function()
+  require("gitsigns").prev_hunk()
+end, vim.tbl_extend("force", opts, { desc = "Prev git hunk" }))
+
+-- map("n", "<leader>hs", function()
+--   require("gitsigns").stage_hunk()
+-- end, vim.tbl_extend("force", opts, { desc = "Stage hunk" }))
+
+-- map("n", "<leader>hr", function()
+--   require("gitsigns").reset_hunk()
+-- end, vim.tbl_extend("force", opts, { desc = "Reset hunk" }))
+
 -- More key mappings here
 -- Save file with Ctrl-s
 -- map("n", "<C-s>", ":w<CR>", opts)
 
 -- Reload config
 -- map("n", "<leader>r", ":source $MYVIMRC<CR>", opts)
+
+-- Manual linting
+map("n", "<leader>ll", function()
+  require("lint").try_lint()
+end, vim.tbl_extend("force", opts, { desc = "Run linter" }))
